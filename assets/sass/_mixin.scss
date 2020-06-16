@@ -5,11 +5,12 @@
 }
   
 // TEXT PROPERTIES MIXIN
-@mixin textcharacteristics($color,$fontsize:16px,$fontweight:400,$line:null) {
+@mixin textcharacteristics($color,$fontsize:16px,$fontweight:400,$texttransform:lowercase,$line:null) {
 	color: $color;
 	font-size: $fontsize;
 	font-weight: $fontweight;
 	line-height: $line;
+	text-transform: $texttransform;
 }
   
 // BACKGROUND IMAGE MIXIN

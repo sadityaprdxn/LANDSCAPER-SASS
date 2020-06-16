@@ -1,0 +1,222 @@
+@font-face {
+  src: url("../fonts/Brusher.ttf");
+  font-family: 'brusher';
+}
+
+@font-face {
+  src: url("../fonts/edosz.ttf");
+  font-family: 'edosz';
+}
+
+@font-face {
+  src: url("../fonts/Brushcrazy DEMO.otf");
+  font-family: 'brushify';
+}
+
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
+blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
+ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
+dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
+tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
+figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -.7em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf {
+  *zoom: 1;
+}
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: 'Montserrat';
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/*for wrapper*/
+.wrapper {
+  max-width: 1360px;
+  width: 84%;
+  margin: 0 auto;
+}
+
+header {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  left: 0;
+  background-color: #363636;
+  padding: 1.9% 0;
+}
+
+header .wrapper {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+header .navbar a {
+  color: rgba(225, 225, 225, 0.9);
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  padding: 10px 5px;
+  letter-spacing: 1px;
+  border-radius: 5px;
+  transition: 0.3s ease-in-out;
+}
+
+header .navbar a:hover {
+  background-color: #69AD31;
+  color: #FFF;
+}
+
+header .navbar li {
+  padding: 0 13.5px;
+  margin-top: 3px;
+}
+
+header .navbar li:last-child {
+  padding-right: 0;
+}
+
+header .hamburger {
+  width: 40px;
+  padding: 8px;
+  margin: 15px 0;
+  display: none;
+  position: relative;
+  z-index: 3;
+  box-sizing: border-box;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+header .hamburger span {
+  width: 100%;
+  height: 3px;
+  margin-bottom: 5px;
+  display: block;
+  background-color: #FFF;
+  text-indent: -9999px;
+  transition-duration: 0.3s;
+}
+
+header .hamburger span:last-child {
+  margin: 0;
+}
+
+header .hamburger.active-hamburger {
+  background-color: #69AD31;
+}
+
+header .hamburger.active-hamburger span:first-child {
+  transform: translateY(8px) rotate(135deg);
+  background-color: #000;
+}
+
+header .hamburger.active-hamburger span:last-child {
+  transform: translateY(-8px) rotate(-135deg);
+  background-color: #000;
+}
+
+header .hamburger.active-hamburger span:nth-child(2) {
+  transform: scale(0);
+  background-color: #000;
+}
