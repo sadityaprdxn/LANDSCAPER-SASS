@@ -1,0 +1,51 @@
+.services {
+	padding: 9% 0 11.8%;
+	background-color: $primarycolor;
+	
+	h3 {
+		color: #FFF;
+		text-transform: capitalize;
+		text-align: center;
+
+		& + span {
+			padding: 4% 0;
+			display: block;
+			text-align: center;
+			@include textcharacteristics(rgba(255,255,255,0.7),16px,500,null);
+			word-spacing: 1px;
+		}
+	}
+
+	ul {
+		padding: 4% 0 0;
+		@include flex(wrap,row,space-between,center,center);
+	}
+	
+	li {
+		width: 23%;
+
+		figure {
+			width: 85%;
+			margin: 0 7.5%;
+
+			img { 
+				@include boxsizing();
+				border: 10px solid rgba(255,255,255,0.1);
+				border-radius: 50%; 
+			}
+		}
+	}
+
+	h4 {
+		padding: 11.2% 0 5%;
+		@include textcharacteristics(#FFF,22px,400,capitalize);
+		text-align: center;
+
+		& + p {
+			text-align: center;
+			@include textcharacteristics(rgba(255,255,255,0.6),14px,500,null);
+			word-spacing: 1px;
+			line-height: 21px;
+		}
+	}
+}
