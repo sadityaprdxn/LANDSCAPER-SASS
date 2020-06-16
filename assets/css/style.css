@@ -220,3 +220,52 @@ header .hamburger.active-hamburger span:nth-child(2) {
   transform: scale(0);
   background-color: #000;
 }
+
+.banner {
+  background: url("https://via.placeholder.com/1350x1000") 50% 50% no-repeat;
+  background-size: cover;
+}
+
+.banner .banner-content {
+  width: 67%;
+  padding: 28% 0 17.4%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.banner .banner-content h2 {
+  padding-bottom: 2.8%;
+  color: #FFF;
+  font-size: 60px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  word-spacing: -5px;
+  text-align: center;
+}
+
+.banner .banner-content p {
+  width: 80%;
+  padding-bottom: 6.9%;
+  margin: 0 auto;
+  text-align: center;
+  color: #FFF;
+  font-size: 21px;
+  font-weight: 400;
+  line-height: 26px;
+  word-spacing: -3px;
+  letter-spacing: 0px;
+}
+
+.banner .banner-content .more-info {
+  padding: 2% 2.5%;
+  box-sizing: border-box;
+  border-top: 1px solid #FFF;
+  border-bottom: 1px solid #FFF;
+  background-color: #69AD31;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 17px;
+  font-weight: 200;
+  text-transform: uppercase;
+}

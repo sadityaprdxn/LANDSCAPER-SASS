@@ -5,7 +5,7 @@
 }
   
 // TEXT PROPERTIES MIXIN
-@mixin textcharacteristics($color,$fontsize:16px,$fontweight:400,$texttransform:lowercase,$line:null) {
+@mixin textcharacteristics($color,$fontsize:16px,$fontweight:400,$texttransform:null,$line:null) {
 	color: $color;
 	font-size: $fontsize;
 	font-weight: $fontweight;
