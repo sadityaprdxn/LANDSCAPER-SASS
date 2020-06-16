@@ -1,0 +1,47 @@
+.gallery {
+	padding: 7.5% 0 3.5%;
+
+	h3 {
+		text-align: center;
+		text-transform: capitalize;
+
+		& + span {
+			padding: 3.8% 0;
+			display: block;
+			text-align: center;
+			@include textcharacteristics(rgba(0,0,0,0.45),18px,600,null);
+			letter-spacing: -1px;
+		}
+  }
+
+	.tab-controls {
+		padding: 1.7% 0;
+		@include flex(wrap,row,center,center,center);
+
+		li {
+			padding: 0 12px;
+
+			&.active a {
+				background-color: $primarycolor;
+				color: #FFF;
+			}
+		}
+
+		a {
+			padding: 10px 15px;
+			border-radius: 5px;
+			background-color: rgba(0,0,0,0.07);
+			@include textcharacteristics(rgba(0,0,0,0.6),16px,500,uppercase);
+		}
+	}
+
+	.tab-content {
+		padding: 3.5% 0;
+		@include flex(wrap,row,space-between,center,center);
+
+		li {
+			width: 31.6%;
+			padding-bottom: 2.7%;
+		}
+	}
+}
