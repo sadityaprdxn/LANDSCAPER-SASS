@@ -34,6 +34,51 @@
 			background-color: $primarycolor;
 			border-radius: 5px;
 			@include textcharacteristics(#FFF,17px,200,uppercase);
+			@include transition(0.3s);
+
+			&:hover {
+				box-shadow: 0px 10px 10px rgba(0,0,0,0.4);
+			}
+		}
+	}
+}
+
+@include breakpoint('ipad') {
+	.banner {
+
+		.banner-content {
+			width: 100%;
+			padding: 17% 0 13%;
+
+			h2 { font-size: 40px;	}
+
+			p { font-size: 17px; }
+
+			.more-info {
+				padding: 2%;
+				font-size: 15px;
+			}
+		}
+	}
+}
+
+@include breakpoint('iphone') {
+	.banner {
+
+		.banner-content {
+			padding: 20% 0 15%;
+
+			h2 { 
+				font-size: 30px;
+				word-spacing: 3px;
+			}
+
+			p { font-size: 17px; }
+
+			.more-info {
+				padding: 2%;
+				font-size: 15px;
+			}
 		}
 	}
 }

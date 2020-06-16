@@ -49,3 +49,23 @@
 		}
 	}
 }
+
+@include breakpoint('ipad') {
+	.services {
+
+		li {
+			width: 48%;
+			padding-bottom: 5%;
+		}
+	}
+}
+
+@include breakpoint('iphone') {
+	.services {
+
+		li {
+			width: 100%;
+			padding-bottom: 5%;
+		}
+	}
+}

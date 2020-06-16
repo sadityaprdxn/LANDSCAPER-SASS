@@ -221,6 +221,42 @@ header .hamburger.active-hamburger span:nth-child(2) {
   background-color: #000;
 }
 
+@media screen and (max-width: 995px) {
+  header .navbar a {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  header {
+    position: relative;
+  }
+  header .navbar {
+    width: 100%;
+    height: 100vh;
+    padding: 10% 0;
+    background-color: #69AD31;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: auto;
+    bottom: auto;
+    left: 0;
+    clip-path: circle(0 at 100% 0);
+    transition: 0.6s ease-in-out;
+  }
+  header .navbar.active-navbar {
+    clip-path: circle(250% at 100% 0);
+  }
+  header .navbar li {
+    display: block;
+    text-align: center;
+  }
+  header .hamburger {
+    display: block;
+  }
+}
+
 .banner {
   background: url("https://via.placeholder.com/1350x1000") 50% 50% no-repeat;
   background-size: cover;
@@ -268,6 +304,45 @@ header .hamburger.active-hamburger span:nth-child(2) {
   font-size: 17px;
   font-weight: 200;
   text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.banner .banner-content .more-info:hover {
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 995px) {
+  .banner .banner-content {
+    width: 100%;
+    padding: 17% 0 13%;
+  }
+  .banner .banner-content h2 {
+    font-size: 40px;
+  }
+  .banner .banner-content p {
+    font-size: 17px;
+  }
+  .banner .banner-content .more-info {
+    padding: 2%;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .banner .banner-content {
+    padding: 20% 0 15%;
+  }
+  .banner .banner-content h2 {
+    font-size: 30px;
+    word-spacing: 3px;
+  }
+  .banner .banner-content p {
+    font-size: 17px;
+  }
+  .banner .banner-content .more-info {
+    padding: 2%;
+    font-size: 15px;
+  }
 }
 
 .welcome {
@@ -325,6 +400,11 @@ header .hamburger.active-hamburger span:nth-child(2) {
   font-size: 17px;
   font-weight: 200;
   text-transform: uppercase;
+  transition: 0.3s ease-in-out;
+}
+
+.welcome .welcome-content .view-services:hover {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
 }
 
 .service {
@@ -368,6 +448,36 @@ h3 {
 
 h3 span {
   color: #69AD31;
+}
+
+@media screen and (max-width: 995px) {
+  .welcome .welcome-content {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+  .service {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  .welcome .welcome-content {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+  .service ul li {
+    width: 100%;
+    padding-bottom: 10%;
+  }
+}
+
+@media screen and (max-width: 995px) {
+  h3 {
+    font-size: 20px;
+  }
+  .welcome .welcome-content .view-services {
+    font-size: 12px;
+  }
 }
 
 .services {
@@ -434,6 +544,20 @@ h3 span {
   line-height: 21px;
 }
 
+@media screen and (max-width: 995px) {
+  .services li {
+    width: 48%;
+    padding-bottom: 5%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .services li {
+    width: 100%;
+    padding-bottom: 5%;
+  }
+}
+
 .gallery {
   padding: 7.5% 0 3.5%;
 }
@@ -467,6 +591,7 @@ h3 span {
   padding: 0 12px;
 }
 
+.gallery .tab-controls li:hover a,
 .gallery .tab-controls li.active a {
   background-color: #69AD31;
   color: #FFF;
@@ -480,6 +605,7 @@ h3 span {
   font-size: 16px;
   font-weight: 500;
   text-transform: uppercase;
+  transition: 0.3s ease-in-out;
 }
 
 .gallery .tab-content {
@@ -495,6 +621,24 @@ h3 span {
 .gallery .tab-content li {
   width: 31.6%;
   padding-bottom: 2.7%;
+}
+
+@media screen and (max-width: 767px) {
+  .gallery .tab-controls a {
+    font-size: 10px;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .gallery .tab-controls li {
+    padding: 0 4px;
+  }
+  .gallery .tab-controls a {
+    padding: 5px 8px;
+  }
+  .gallery .tab-content li {
+    width: 100%;
+  }
 }
 
 .testimonials {
@@ -561,10 +705,22 @@ h3 span {
   background-color: rgba(255, 255, 255, 0.4);
   border-radius: 50%;
   margin: 0 7px;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.testimonials .slider-controls .dot:hover {
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .testimonials .slider-controls .dot.active {
   background-color: #FFF;
+}
+
+@media screen and (max-width: 767px) {
+  .testimonials .slider-content li {
+    padding: 0;
+  }
 }
 
 .contact-us {
@@ -663,10 +819,14 @@ h3 span {
   border: 2px solid rgba(0, 0, 0, 0.1);
 }
 
+.contact-us form .form-controls {
+  width: 100%;
+  text-align: center;
+}
+
 .contact-us form button {
   padding: 17px 30px;
   margin-top: 16px;
-  margin-left: 275px;
   box-sizing: border-box;
   background-color: #69AD31;
   border-radius: 5px;
@@ -675,6 +835,27 @@ h3 span {
   font-weight: 100;
   text-transform: uppercase;
   border-style: none;
+  transition: 0.3s ease-in-out;
+}
+
+.contact-us form button:hover {
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.4);
+}
+
+@media screen and (max-width: 995px) {
+  .contact-us ul li {
+    width: 100%;
+    padding: 0 0 10%;
+  }
+  .contact-us form {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 540px) {
+  .contact-us form .form-group {
+    width: 100%;
+  }
 }
 
 footer {
@@ -692,6 +873,13 @@ footer .google-plus {
   background-color: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   margin: 0 22px;
+  transition: 0.3s ease-in-out;
+}
+
+footer .facebook:hover,
+footer .twitter:hover,
+footer .google-plus:hover {
+  background-color: rgba(255, 255, 255, 0.3);
 }
 
 footer .facebook::before {
@@ -745,4 +933,16 @@ footer span {
 footer span span {
   display: inline;
   color: rgba(255, 255, 255, 0.4);
+}
+
+@media screen and (max-width: 540px) {
+  footer {
+    padding: 15%;
+  }
+  footer .social-icon {
+    flex-direction: column;
+  }
+  footer .social-icon li {
+    padding-bottom: 10%;
+  }
 }

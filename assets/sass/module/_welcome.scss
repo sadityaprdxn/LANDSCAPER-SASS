@@ -38,6 +38,11 @@
 			background-color: $primarycolor;
 			border-radius: 5px;
 			@include textcharacteristics(#FFF,17px,200,uppercase);
+			@include transition(0.3s);
+
+			&:hover {
+				box-shadow: 5px 10px 10px rgba(0,0,0,0.4);
+			}
 		}
 	}
 }
@@ -68,4 +73,56 @@ h3 {
 	word-spacing: -2px;
 
 	span { color: $primarycolor; }
+}
+
+@include breakpoint('ipad') {
+	.welcome {
+
+		.welcome-content {
+			width: 100%;
+			padding-bottom: 5%;
+		}
+	}
+
+	.service {
+		width: 100%;
+	}
+}
+
+@include breakpoint('ipad') {
+	.welcome {
+
+		.welcome-content {
+			width: 100%;
+			padding-bottom: 5%;
+		}
+	}
+
+	.service {
+
+		ul {
+
+			li {
+				width: 100%;
+				padding-bottom: 10%;
+			}
+		}
+	}
+}
+
+
+@include breakpoint('ipad') {
+	h3 {
+		font-size: 20px;
+	}
+
+	.welcome {
+
+		.welcome-content {
+
+			.view-services {
+				font-size: 12px;
+			}
+		}
+	}
 }

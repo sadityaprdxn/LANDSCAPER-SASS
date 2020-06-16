@@ -74,15 +74,53 @@
 			border: 2px solid rgba(0,0,0,0.1);
 		}
 
+		.form-controls {
+			width: 100%;
+			text-align: center;
+		}
+
 		button {
 			padding: 17px 30px;
 			margin-top: 16px;
-			margin-left: 275px;
 			@include boxsizing();
 			background-color: $primarycolor;
 			border-radius: 5px;
 			@include textcharacteristics(rgba(255,255,255,0.8),15px,100,uppercase);
 			border-style: none;
+			@include transition(0.3s);
+
+			&:hover {
+				box-shadow: 5px 10px 10px rgba(0,0,0,0.4);
+			}
+		}
+	}
+}
+
+@include breakpoint('ipad') {
+	.contact-us {
+
+		ul {
+
+			li {
+				width: 100%;
+				padding: 0 0 10%;
+			}
+		}
+
+		form {
+			width: 100%;
+		}
+	}
+}
+
+@include breakpoint('iphone') {
+	.contact-us {
+
+		form {
+
+			.form-group {
+				width: 100%;
+			}
 		}
 	}
 }
