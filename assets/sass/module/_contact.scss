@@ -1,0 +1,88 @@
+.contact-us {
+	padding: 7.5% 0 7.4%;
+	background-color: #F6F6F6;
+
+	h3 {
+		text-transform: capitalize;
+		text-align: center;
+
+		& + span {
+			padding: 3.8% 0;
+			display: block;
+			text-align: center;
+			@include textcharacteristics(rgba(0,0,0,0.45),18px,600,null);
+			letter-spacing: -1px;
+		}
+	}
+
+	ul {
+		padding: 4.1% 0 7%;
+		@include flex(wrap,row,center,center,center);
+
+		li {
+			padding: 0 5%;
+		}
+	}
+
+	h4 {
+		padding-bottom: 30px;
+		@include textcharacteristics(rgba(0,0,0,0.7),16px,700,uppercase);
+		letter-spacing: -0.5px;
+		text-align: center;
+
+		& + span,
+		& + span + span{
+			display: block;
+			text-align: center;
+			@include textcharacteristics(rgba(0,0,0,0.4),14px,700,null,24px);
+			letter-spacing: -0.5px;
+			padding-bottom: 8px;
+		}
+	}
+
+	form {
+		width: 64.5%;
+		padding: 0.9% 0 0;
+		margin: 0 auto;
+		@include flex(wrap,row,space-between,center,center);
+
+		.form-group {
+			width: 48%;
+			padding-bottom: 2%;
+
+			&:nth-child(3) {
+				width: 100%;
+			}
+		}
+
+		input {
+			width: 100%;
+			padding: 3% 6%;
+			font-size: 16px;
+			border-style: none;
+			@include boxsizing;
+			border: 2px solid rgba(0,0,0,0.1);
+		}
+
+		textarea {
+			width: 100%;
+			height: 130px;
+			padding: 1% 2%;
+			font-size: 16px;
+			border-style: none;
+			@include boxsizing;
+			border: 2px solid rgba(0,0,0,0.1);
+		}
+
+		button {
+			padding: 17px 30px;
+			margin-top: 16px;
+			margin-left: 275px;
+			@include boxsizing();
+			background-color: $primarycolor;
+			border-radius: 5px;
+			@include textcharacteristics(rgba(255,255,255,0.8),15px,100,uppercase);
+			border-style: none;
+		}
+	}
+}
