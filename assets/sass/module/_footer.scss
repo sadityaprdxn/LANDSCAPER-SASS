@@ -1,0 +1,52 @@
+footer {
+	padding: 3% 0 2.5%;
+	background-color: $secondarycolor;
+
+	.facebook,
+	.twitter,
+	.google-plus {
+		text-indent: -9999px;
+		position: relative;
+		width: 40px;
+		height: 40px;
+		background-color: rgba(255,255,255,0.1);
+		border-radius: 50%;
+		margin: 0 22px;
+	}
+
+	.facebook::before { content:"\f09a"; }
+
+	.google-plus::before { content:"\f0d5"; }
+
+	.twitter::before { content:"\f099"; }
+
+	.facebook::before,
+	.google-plus::before,
+	.twitter::before {
+		padding: 2px;
+		font-family: "fontAwesome";
+		text-indent: 0;
+		font-size: 22px;
+		font-weight: 200;
+		color: $primarycolor;
+		@include position(absolute,1,50%,auto,auto,50%);
+		transform: translateX(-50%) translateY(-50%);
+		
+	}
+
+	.social-icon {
+		padding-bottom: 4.5%;
+		@include flex(nowrap,row,center,center,center);
+	}
+
+	span {
+		display: block;
+		text-align: center;
+		@include textcharacteristics(rgba(255,255,255,0.25),13.5px,300,null);
+
+		span { 
+			display: inline;
+			color: rgba(255,255,255,0.4);
+		}
+	}
+}
