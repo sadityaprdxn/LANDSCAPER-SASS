@@ -1,0 +1,55 @@
+.testimonials {
+	padding: 9% 0 9.7%;
+	background: linear-gradient( rgba(105,173,49,0.9) , rgba(105,173,49,0.9)) , url('https://via.placeholder.com/1350x1000') 50% 50% no-repeat;
+	background-size: cover;
+
+	h3 {
+		color: #FFF;
+		text-transform: capitalize;
+		text-align: center;
+		padding-bottom: 8.2%;
+	}
+
+	.slider-content {
+		@include flex(nowrap,row,flex-start,center,center);
+		overflow: hidden;
+
+		li {
+			min-width: 100%;
+			@include boxsizing;
+			padding: 0 10%;
+
+			p {
+				text-align: center;
+				@include textcharacteristics(rgba(255,255,255,0.6),16px,500,null,33px);
+				padding-bottom: 1%;
+			}
+
+			span {
+				display: block;
+				text-align: center;
+				@include textcharacteristics(rgba(255,255,255,0.6),16px,500,null,33px);
+				// word-spacing: -2px;
+				// letter-spacing: -1px;
+			}
+		}
+	}
+
+	.slider-controls {
+		padding: 2% 0 0;
+		@include flex(nowrap,row,center,center,center);
+
+		.dot {
+			text-indent: -9999px;
+			width: 12px;
+			height: 12px;
+			background-color: rgba(255,255,255,0.4);
+			border-radius: 50%;
+			margin: 0 7px;
+
+			&.active {
+				background-color: #FFF;
+			}
+		}
+	}
+}
